@@ -1,0 +1,179 @@
+@import "../maps/variable.scss";
+@import "../maps/mixins";
+
+.VerificarEdad {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("/images/fondo1.jpg") center center fixed;
+    background-size: cover;
+    color: $color-principal-titulos;
+    text-shadow: 10px 10px 10px black;
+  
+    #formulario {
+      width: 80%;
+      max-width: 400px;
+      margin: 0 auto;
+      background: url("/images/Fondo.jpg");
+      box-shadow: 10px 10pc 30px $color-sombra;
+      border: 5px solid $color-borde;
+      padding: 20px;
+      border-radius: 10px;
+      justify-content: center;
+      text-align: center;
+  
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+  
+      input {
+        width: calc(100% - 20px); // Ajusta el ancho del input, dejando espacio para el padding
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 10px; // Agrega margen inferior para separar el input del botón
+      }
+  
+      button {
+        @include button();
+      }
+  
+      // Ajustes responsivos
+      @media screen and (max-width: 768px) {
+        width: 90%;
+  
+        input {
+          width: calc(100% - 20px);
+          font-size: 14px;
+        }
+  
+        button {
+         @include button();
+        }
+      }
+    }
+  }
+  //home//
+  .descripcionGolden {
+    display: flex;
+    align-items: center;
+}
+
+.descripcionGolden img {
+    max-width: 50%; /* Ajusta el tamaño de la imagen según lo necesites */
+    margin-top: 20px;
+}
+
+.descripcionGolden .texto {
+    flex: 1;
+    margin-left: 20px; /* Espacio entre la imagen y el texto */
+    color: $color-principal-titulos;
+}
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color:$color-fondo ;
+  color: $color-principal-titulos;
+  text-align: center;
+  padding: 20px 0;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  color: $color-principal-titulos;
+}
+
+footer {
+  background-color:$color-fondo;
+  color: $color-subtitulos;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Estilos para las semillas */
+.semilla {
+  width: calc(25% - 40px); /* Ancho de cada columna (25% - margen) */
+  margin: 20px; /* Espacio entre las semillas */
+  padding: 10px;
+  text-align: center;
+
+  /* Estilo para la imagen dentro de cada semilla */
+  img {
+    width: 100%; /* Tamaño máximo del ancho */
+    height: auto; /* Altura automática para mantener la proporción */
+  }
+}
+
+/* Estilos para la imagen principal */
+.main-image {
+  box-sizing: content-box;
+  background: url(/images/fondo1.jpg) no-repeat;
+  background-size: cover;
+  box-shadow: rgb(8, 8, 8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+
+  h1 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 4em;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    text-shadow: 
+      -1px -1px 0 black,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+      1px 1px 0 black;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.5em;
+    color: rgb(215, 223, 145);
+    font-weight: 200;
+    padding: 0px 30px;
+    text-shadow: 
+      -1.3px -1.3px 0 black,
+      1.3px -1.3px 0 black,
+      -1.3px 1.3px 0 black,
+      1.3px 1.3px 0 black;
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+
+  .boton {
+    @include button();
+  }
+}
+
+#lista-carrito img {
+  width: 50px; /* Tamaño deseado */
+  height: auto; /* Altura automática para mantener la proporción */
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+/* Estilos para el botón de "Agregar al Carrito" */
+.agregar-carrito {
+  @include button();
+}
+
+/* Estilos para el botón de "Limpiar Carrito" */
+#limpiar-carrito {
+  @include button();
+}

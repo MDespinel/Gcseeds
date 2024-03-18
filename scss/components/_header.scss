@@ -1,0 +1,59 @@
+@import "../maps/variable.scss";
+@import "../maps/mixins";
+
+header {
+  background: url(../img/Fondo.jpg);
+  color: black;
+  padding-bottom: 10px;
+
+  .containerlogos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .col-sm {
+        text-align: center;
+
+        .logo-1,
+        .logo-2 {
+          max-width: 200px;
+          height: auto;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+}
+
+.anim {
+  transition: transform 1s ease-out;
+  color: rgb(215, 223, 145);
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+
+.menu {
+  color: rgb(129, 254, 2);
+  padding: 0px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+// Reglas de medios para dispositivos más pequeños (ajustar según sea necesario)
+@media (max-width: 768px) {
+  header .containerlogos .row {
+    flex-direction: column;
+  }
+
+  header .containerlogos .row .col-sm {
+    margin: 10px 0;
+  }
+}
+

@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("/images/fondo1.jpg") center center fixed;
+    background: url("../images/fondo1.jpg") center center fixed;
     background-size: cover;
     color: $color-principal-titulos;
     text-shadow: 10px 10px 10px black;
@@ -15,7 +15,7 @@
       width: 80%;
       max-width: 400px;
       margin: 0 auto;
-      background: url("/images/Fondo.jpg");
+      background: url("../images/Fondo.jpg");
       box-shadow: 10px 10pc 30px $color-sombra;
       border: 5px solid $color-borde;
       padding: 20px;
@@ -118,7 +118,7 @@ footer {
 /* Estilos para la imagen principal */
 .main-image {
   box-sizing: content-box;
-  background: url(/images/fondo1.jpg) no-repeat;
+  background: url(../images/fondo1.jpg) no-repeat;
   background-size: cover;
   box-shadow: rgb(8, 8, 8);
   display: flex;
@@ -177,3 +177,63 @@ footer {
 #limpiar-carrito {
   @include button();
 }
+
+#carrito {
+  width: 300px; 
+  margin: 0 auto;
+  padding: 20px; 
+  border: 1.5PX solid #030000;
+  background-color: $color-fondo; 
+  color: $color-principal-titulos; 
+  text-align: center; 
+  
+  h2 {
+    font-size: 1.5rem; 
+    margin-bottom: 15px; 
+  }
+
+  ul {
+    list-style: none; 
+    padding: 0; 
+    margin-bottom: 15px; 
+  }
+
+  p {
+    margin-bottom: 15px; 
+  }
+
+  button {
+    @include button()
+ 
+  }
+}
+//*contacto*//
+
+.contacto-form {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 300px;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: $color-fondo-sec;
+      color: #333;
+      border: 3px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      @include button()
+      }
+    }
+  }

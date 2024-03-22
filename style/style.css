@@ -1,6 +1,6 @@
 @charset "UTF-8";
 header {
-  background: url(../img/Fondo.jpg);
+  background: url(/img/Fondo.jpg);
   color: black;
   padding-bottom: 10px;
 }
@@ -19,7 +19,7 @@ header .containerlogos .row .col-sm {
 }
 header .containerlogos .row .col-sm .logo-1,
 header .containerlogos .row .col-sm .logo-2 {
-  max-width: 200px;
+  max-width: 150px;
   height: auto;
   margin: 0 10px;
 }
@@ -47,12 +47,43 @@ header .containerlogos .row .col-sm .logo-2 {
     margin: 10px 0;
   }
 }
+.Main-boton {
+  position: relative;
+}
+.Main-boton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-image: url(/imagenes/fondo\ header.jpg);
+  background-size: contain;
+  z-index: -1;
+}
+.Main-boton .boton {
+  text-align: center;
+  text-size-adjust: 5px;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 3px solid #e4a837;
+  text-decoration: none;
+  color: #e4a837;
+  background-color: transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.Main-boton .boton:hover {
+  background-color: #3b6754;
+  border-color: #666;
+}
+
 .VerificarEdad {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("/images/fondo1.jpg") center center fixed;
+  background: url("../images/fondo1.jpg") center center fixed;
   background-size: cover;
   color: #e4a837;
   text-shadow: 10px 10px 10px black;
@@ -61,7 +92,7 @@ header .containerlogos .row .col-sm .logo-2 {
   width: 80%;
   max-width: 400px;
   margin: 0 auto;
-  background: url("/images/Fondo.jpg");
+  background: url("../images/Fondo.jpg");
   box-shadow: 10px 10pc 30px rgba(0, 0, 0, 0.2);
   border: 5px solid #333;
   padding: 20px;
@@ -182,7 +213,7 @@ footer {
 /* Estilos para la imagen principal */
 .main-image {
   box-sizing: content-box;
-  background: url(/images/fondo1.jpg) no-repeat;
+  background: url(../images/fondo1.jpg) no-repeat;
   background-size: cover;
   box-shadow: rgb(8, 8, 8);
   display: flex;
@@ -265,6 +296,79 @@ footer {
   transition: background-color 0.3s;
 }
 #limpiar-carrito:hover {
+  background-color: #555;
+}
+
+#carrito {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1.5PX solid #030000;
+  background-color: #19372b;
+  color: #e4a837;
+  text-align: center;
+}
+#carrito h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+#carrito ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+#carrito p {
+  margin-bottom: 15px;
+}
+#carrito button {
+  width: 300px;
+  padding: 10px 20px;
+  background-color: #19372b;
+  color: #e4a837;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#carrito button:hover {
+  background-color: #555;
+}
+
+.contacto-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.contacto-form form label {
+  margin-bottom: 5px;
+}
+.contacto-form form input[type=text],
+.contacto-form form input[type=email],
+.contacto-form form textarea {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #3b6754;
+  color: #333;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.contacto-form form button {
+  width: 300px;
+  padding: 10px 20px;
+  background-color: #19372b;
+  color: #e4a837;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.contacto-form form button:hover {
   background-color: #555;
 }
 

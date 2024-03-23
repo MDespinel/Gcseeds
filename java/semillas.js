@@ -1,7 +1,7 @@
 // Renderizar las semillas al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
   // Cargar el archivo JSON
-  fetch('/java/semillas.json')
+  fetch('../java/semillas.json')
       .then(response => response.json()) // Parsear la respuesta como JSON
       .then(semillas => renderizarSemillas(semillas)) // Pasar los datos a la función renderizarSemillas
       .catch(error => console.error('Error al cargar el archivo JSON:', error));
